@@ -1,0 +1,137 @@
+:root {
+    --orange-50: #fff7ed;
+    --orange-600: #ea580c;
+    --orange-700: #c2410c;
+    --orange-800: #9a3412;
+    --gray-700: #374151;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--gray-700);
+    background-color: var(--orange-50);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--orange-600);
+    color: white;
+    padding: 1rem 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--orange-800);
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--orange-700);
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: var(--orange-700);
+    margin-bottom: 0.5rem;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.destinations {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.destinations ul {
+    padding-left: 1.5rem;
+}
+
+.destinations li {
+    margin-bottom: 0.5rem;
+}
+
+.experience-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+}
+
+.experience-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.experience-card h4,
+.experience-card p {
+    padding: 0 1.5rem;
+}
+
+.experience-card h4 {
+    margin-top: 1rem;
+}
+
+.experience-card p {
+    margin-bottom: 1.5rem;
+}
+
+footer {
+    background-color: var(--orange-800);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
