@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  color: #2c3e50;
+}
+#search-form {
+  display: flex;
+  margin-bottom: 20px;
+}
+#word-input {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+}
+#search-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+#search-btn:hover {
+  background-color: #2980b9;
+}
+#result {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px;
+}
+.word-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.phonetic {
+  font-style: italic;
+  color: #7f8c8d;
+  margin-bottom: 15px;
+}
+.part-of-speech {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+.definition {
+  margin-bottom: 10px;
+}
+.example {
+  margin-left: 20px;
+  color: #7f8c8d;
+  font-style: italic;
+}
+.synonyms,
+.antonyms {
+  margin-left: 20px;
+}
+#error-message {
+  color: #e74c3c;
+  font-weight: bold;
+}
+.loading {
+  text-align: center;
+  font-style: italic;
+  color: #7f8c8d;
+}
