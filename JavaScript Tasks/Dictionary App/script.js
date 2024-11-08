@@ -46,12 +46,10 @@ function displayResult(wordData) {
       if (def.example) {
         html += `<div class="example"><strong>Example:</strong> "${def.example}"</div>`;
       }
-      if (def.synonyms && def.synonyms.length > 0) {
-        html += `<div class="synonyms"><strong>Synonyms:</strong> ${def.synonyms.join(", ")}</div>`;
-      }
-      if (def.antonyms && def.antonyms.length > 0) {
-        html += `<div class="antonyms"><strong>Antonyms:</strong> ${def.antonyms.join(", ")}</div>`;
-      }
+      // Handle Synonyms
+      html += `<div class="synonyms"><strong>Synonyms:</strong> ${def.synonyms && def.synonyms.length > 0 ? def.synonyms.join(", ") : "Not available"}</div>`;
+      // Handle Antonyms
+      html += `<div class="antonyms"><strong>Antonyms:</strong> ${def.antonyms && def.antonyms.length > 0 ? def.antonyms.join(", ") : "Not available"}</div>`;
       html += `</div>`; // Close definition-container
     });
     html += `</div>`; // Close meaning-container
