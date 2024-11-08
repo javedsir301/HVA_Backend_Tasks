@@ -4,15 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dictionary App</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Dictionary App</h1>
-    <form id="search-form">
-      <input type="text" id="word-input" placeholder="Enter a word" required />
-      <button type="submit" id="search-btn">Search</button>
-    </form>
-    <div id="result"></div>
+    <div class="container">
+      <h1 class="app-title">Dictionary App</h1>
+      <form id="search-form">
+        <div class="input-group">
+          <input
+            type="text"
+            id="word-input"
+            placeholder="Enter a word..."
+            required
+          />
+          <button type="submit" id="search-btn">Search</button>
+        </div>
+      </form>
+      <div id="result"></div>
+    </div>
 
     <script src="script.js"></script>
   </body>

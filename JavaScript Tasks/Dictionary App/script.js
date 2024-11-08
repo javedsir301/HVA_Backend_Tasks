@@ -25,32 +25,36 @@ form.addEventListener("submit", async (e) => {
 
 function displayResult(wordData) {
   let html = `
-                <div class="word-title">${wordData.word}</div>
-                <div class="phonetic">${wordData.phonetic || ""}</div>
-            `;
+    <div class="word-container">
+      <h2 class="word-title">${wordData.word}</h2>
+      <div class="phonetic">Phonetic: <em>${wordData.phonetic || "Not available"}</em></div>
+    </div>
+  `;
 
   wordData.meanings.forEach((meaning) => {
-    html += `<div class="part-of-speech">${meaning.partOfSpeech}</div>`;
+    html += `
+      <div class="meaning-container">
+        <h3 class="part-of-speech">Part of Speech: <strong>${meaning.partOfSpeech}</strong></h3>
+    `;
     meaning.definitions.forEach((def) => {
       html += `
-                        <div class="definition">
-                            <strong>Definition:</strong> ${def.definition}
-                        </div>
-                    `;
+        <div class="definition-container">
+          <div class="definition">
+            <strong>Definition:</strong> ${def.definition}
+          </div>
+      `;
       if (def.example) {
-        html += `<div class="example"><strong>Example:</strong> ${def.example}</div>`;
+        html += `<div class="example"><strong>Example:</strong> "${def.example}"</div>`;
       }
       if (def.synonyms && def.synonyms.length > 0) {
-        html += `<div class="synonyms"><strong>Synonyms:</strong> ${def.synonyms.join(
-          ", "
-        )}</div>`;
+        html += `<div class="synonyms"><strong>Synonyms:</strong> ${def.synonyms.join(", ")}</div>`;
       }
       if (def.antonyms && def.antonyms.length > 0) {
-        html += `<div class="antonyms"><strong>Antonyms:</strong> ${def.antonyms.join(
-          ", "
-        )}</div>`;
+        html += `<div class="antonyms"><strong>Antonyms:</strong> ${def.antonyms.join(", ")}</div>`;
       }
+      html += `</div>`; // Close definition-container
     });
+    html += `</div>`; // Close meaning-container
   });
 
   resultDiv.innerHTML = html;
