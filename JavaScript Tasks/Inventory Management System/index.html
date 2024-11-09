@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Inventory Management</h1>
+        <div class="product-list">
+            <h2>Products in Inventory</h2>
+            <ul id="product-list">
+            </ul>
+        </div>
+
+        <div class="add-product">
+            <h2>Add New Product</h2>
+            <form id="add-product-form">
+                <input type="text" id="product-name" placeholder="Product Name" required>
+                <input type="number" id="product-price" placeholder="Price" required>
+                <input type="number" id="product-quantity" placeholder="Quantity" required>
+                <button type="submit">Add Product</button>
+            </form>
+        </div>
+
+        <div class="update-product">
+            <h2>Update Product Quantity</h2>
+            <form id="update-product-form">
+                <input type="number" id="update-id" placeholder="Product ID" required>
+                <input type="number" id="update-quantity" placeholder="New Quantity" required>
+                <button type="submit">Update Quantity</button>
+            </form>
+        </div>
+
+        <div class="remove-product">
+            <h2>Remove Product</h2>
+            <form id="remove-product-form">
+                <input type="number" id="remove-id" placeholder="Product ID" required>
+                <button type="submit">Remove Product</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
