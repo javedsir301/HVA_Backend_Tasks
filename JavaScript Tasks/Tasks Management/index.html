@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="message-container"></div>
+    
+    <div id="sidebar">
+        <ul>
+            <li id="new-task-link">New Task</li>
+            <li id="all-tasks-link">All Tasks</li>
+            <li id="pending-tasks-link">Pending Tasks</li>
+            <li id="completed-tasks-link">Completed Tasks</li>
+        </ul>
+    </div>
+
+    <div id="main-content">
+        <div id="new-task-view" class="view">
+            <h2>Create New Task</h2>
+            <form id="task-form">
+                <label for="task-title">Title</label>
+                <input type="text" id="task-title" required>
+                
+                <label for="task-description">Description</label>
+                <textarea id="task-description" required></textarea>
+                
+                <label for="task-due-date">Due Date</label>
+                <input type="date" id="task-due-date" required>
+                
+                <label for="task-priority">Priority</label>
+                <select id="task-priority">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+                
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+
+        <div id="task-list-view" class="view">
+            <div id="filter-dropdown" class="dropdown">
+                <button id="filter-btn" class="dropdown-btn">Filter</button>
+                <div class="dropdown-content" id="filter-dropdown">
+                    <label for="priority-filter">Priority</label>
+                    <select id="priority-filter">
+                        <option value="">Select Priority</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                    <label for="date-filter">Due Date</label>
+                    <select id="date-filter">
+                        <option value="">Select Date Filter</option>
+                        <option value="week">Next 7 Days</option>
+                    </select>
+                    <button id="apply-filter">Apply Filter</button>
+                </div>
+            </div>
+            
+            <h2 id="current-view">All Tasks</h2>
+            <div id="pending-tasks" class="task-list"></div>
+            <div id="completed-tasks" class="task-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
