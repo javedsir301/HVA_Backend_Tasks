@@ -34,6 +34,19 @@
     text-decoration: none;
     color: var(--text-color);
   }
+
+
+.selectBar{
+    color:red;
+    background-color: #252525;
+  }
+
+  .selectBar a{
+    color:red;
+    background-color: #252525;
+  }
+
+
   
   a {
     text-decoration: none;

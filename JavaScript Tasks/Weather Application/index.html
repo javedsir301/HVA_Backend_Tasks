@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather App</h1>
+            <form id="search-form">
+                <div class="search-container">
+                    <input type="text" id="city-input" placeholder="Enter city" required>
+                    <button type="submit" id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </form>
+        </header>
+
+        <button id="toggle-search"></button>
+
+        <main>
+            <section id="current-weather" class="card">
+                <h2>Current Weather</h2>
+                <div id="current-weather-content"></div>
+            </section>
+
+            <section id="forecast" class="forecast">
+                <h2>5-Day Forecast</h2>
+                <div id="forecast-content" class="forecast-grid"></div>
+            </section>
+
+            <div id="error-message" class="error hidden"></div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
